@@ -1,6 +1,11 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/public/intro.html" }
+    "version": 2,
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/intro.html"
+      }
     ]
   }
+  
   
