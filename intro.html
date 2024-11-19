@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <!-- Aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="website icon" type="png" href="aset/foto/swing.png" />
+    <title>Yokoso`</title>
+    <style>
+      .button{
+        color: transparent;
+        background-color: transparent;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <video id="bg-video" poster="aset/foto/thebeast.png" autoplay muted loop>
+        <source src="aset/vid/thebeast.mp4" type="video/mp4" />
+      </video>
+      <div class="video-info">
+        <h2 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">Yokoso The HyperNest Blog</h2>
+        <h5 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">warning</h5>
+        <h1 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">Mohon dibuka di pc/laptop</h1>
+        <!-- <p>
+          <span data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">Come </span><span data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">~ Eat</span
+          ><span data-aos="fade-left" data-aos-delay="700" data-aos-duration="1000"> ~ to Fight</span>
+        </p> -->
+        <h5 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">Masukkan Nama Anda</h5>
+        <input data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" type="text" id="nameInput" placeholder="Ketik nama Anda di sini">
+        <button data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" class="button" onclick="saveName()"><a href="public/cuy.html" class="btn" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">Start</a></button>
+      </div>
+    </header>
+    <script src="public/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      function saveName() {
+            const userName = document.getElementById("nameInput").value;
+
+            if (userName) {
+                // Simpan nama ke LocalStorage
+                localStorage.setItem("userName", userName);
+
+                // Pindah ke halaman kedua
+                window.location.href = "public/cuy.html";
+            } else {
+                alert("Silakan masukkan nama Anda terlebih dahulu.");
+            }
+        }
+    </script>
+
+  </body>
+</html>
