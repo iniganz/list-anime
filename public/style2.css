@@ -4,12 +4,12 @@
     margin : 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url('asset/foto/cursor.png'),auto;
+    cursor: url('cursor.png'),auto;
    
     
 }
 a {
-    cursor: url('asset/foto/cursor2.png'), pointer;
+    cursor: url('cursor2.png'), pointer;
 }
 header {
     width: 100%;

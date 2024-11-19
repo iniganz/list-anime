@@ -4,24 +4,24 @@ html {
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    cursor: url('asset/cursor.png'), auto;
+    cursor: url('cursor.png'), auto;
 
 }
 
 a {
-    cursor: url('asset/cursor2.png'), pointer;
+    cursor: url('cursor2.png'), pointer;
 }
 
 /* font */
 @font-face {
     font-family: "Pokemon";
-    src: url(asset/Pokemon.ttf);
+    src: url(Pokemon.ttf);
 }
 
 /* body */
 body {
 
-    background-image: url(asset/cuy.png);
+    background-image: url(cuy.png);
     font-family: "Pokemon";
     display: flex;
     flex-direction: column;
