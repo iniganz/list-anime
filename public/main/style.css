@@ -1,0 +1,334 @@
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    cursor: url('../images/cursor.png'), auto;
+
+}
+a {
+    cursor: url('../images/cursor2.png'), pointer;
+}
+
+/* font */
+@font-face {
+    font-family: "Pokemon";
+    src: url(../fonts/Pokemon.ttf);
+}
+
+body {
+    height: 1000px;
+    
+    background-image: url("../images/cuy.png");
+}
+
+/* navbar */
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px; /* Tinggi navbar */
+    background-color: #FCCD2A;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: top 0.3s ease-in-out;
+    -webkit-transition: top 0.3s ease-in-out;
+    -moz-transition: top 0.3s ease-in-out;
+    -ms-transition: top 0.3s ease-in-out;
+    -o-transition: top 0.3s ease-in-out;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    margin: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+
+}
+
+.navbar-hidden {
+    top: -100px;
+}
+
+.nav-img {
+    width: 67px;
+    height: 100%;
+    animation: boxshadowRotate 3s infinite;
+    border: 1.5px solid #000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: boxshadowRotate 3s infinite;
+}
+
+.text-nav p {
+    font-size: xx-large;
+    font-family: "Pokemon";
+    letter-spacing: 6px;
+    animation: shadowRotate 3s infinite;
+    -webkit-text-stroke: 1px black;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+.a-navbar {
+    letter-spacing: 3px;
+    font-size: larger;
+
+
+    font-family: "Pokemon";
+    -webkit-text-stroke: 1px black;
+    animation: shadowRotate 6s infinite;
+    -webkit-animation: shadowRotate 6s infinite;
+}
+
+/* end nav */
+
+.hrcuy {
+    animation: boxshadowRotate 3s infinite;
+    border: 1.5px solid #000;
+}
+/* Main Content */
+.main-content {
+    margin-top: 85px; /* Pastikan sesuai dengan tinggi navbar */
+    /* width: 100%; */
+    max-width: 1100px; /* Tetapkan lebar maksimal */
+    margin: auto;
+    /* padding: 20px; */
+    
+}
+
+.content {
+    animation: borderColorMoveF 4s infinite;
+    -webkit-animation: borderColorMoveF 4s infinite;
+    /* max-width: 1500px; */
+    margin: auto;
+    padding: 20px;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    margin-top: 8em;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Header */
+.anime-h1 {
+    font-family: "Pokemon", sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Anime Container */
+.anime-container {
+    background-color: black;
+    padding: 20px 0;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.1);
+    overflow: hidden; /* Menyembunyikan gambar yang keluar */
+}
+
+
+/* Anime Grid */
+.anime-grid {
+    display: flex;
+    flex-direction: column; /* Menyusun secara vertikal (atas-bawah) */
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+}
+/* Anime Items *//* Anime Item */
+.anime-item {
+    width: 750px;
+    height: 650px; /* Sesuaikan tinggi untuk memberi ruang bagi teks */
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column; /* Menyusun gambar dan teks secara vertikal */
+    justify-content: center; /* Vertikal center */
+    align-items: center; /* Horizontal center */
+    text-align: center; /* Agar teks di bawah gambar rata tengah */
+}
+
+/* Gambar */
+.anime-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%); /* Gambar default hitam putih */
+}
+
+/* Efek zoom dan perubahan warna saat hover */
+.anime-item img:hover {
+    transform: scale(1.1); /* Zoom saat hover */
+    filter: grayscale(0%); /* Gambar kembali berwarna saat hover */
+}
+
+/* Teks judul di bawah gambar */
+.anime-item a {
+    text-decoration: none; /* Hilangkan garis bawah pada link */
+}
+
+.anime-title {
+    margin-top: 10px; /* Memberikan jarak dari gambar */
+    font-size: 1.2rem;
+    font-family: "Pokemon", sans-serif;
+    color: #fff; /* Warna teks default putih */
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Bayangan teks untuk keterbacaan */
+}
+
+/* Hover efek untuk teks */
+.anime-item:hover .anime-title {
+    color: #FCCD2A; /* Warna teks saat hover */
+}
+
+/* Hover efek untuk gambar */
+.anime-item:hover img {
+    transform: scale(1.1); /* Efek zoom gambar */
+    filter: grayscale(0%); /* Gambar berwarna saat hover */
+}
+
+/* footer */
+.footer-container {
+    letter-spacing: 3px;
+    border: 1px solid #000;
+    max-width: 1100px;
+    margin: auto;
+    width: 100%;
+    height: 270px;
+    background-color: #0f0e17;
+    /*Matchfootercolortonavbar*/
+    color: #a7a9be;
+    padding: auto;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Pokemon';
+    display: block;
+    animation: borderColorMoveFc 4s infinite;
+    -webkit-animation: borderColorMoveFc 4s infinite;
+}
+
+.footer-item {
+
+    display: flex;
+    text-align: center;
+    padding-bottom: 48px;
+
+}
+
+.footer-item .judul-footers {
+    flex: 1;
+    text-align: center;
+
+}
+
+
+
+.judul-footers {
+    text-align: center;
+    width: 100%;
+}
+
+.judul-footer {
+    font-size: larger;
+    margin: auto;
+}
+
+.footer-text {
+
+    color: #ff8906;
+    font-size: large;
+}
+
+.footer-text:hover {
+    -webkit-text-stroke: 1px rgb(247, 247, 247);
+    color: #ff9244;
+}
+
+.icon-footer {
+    color: #ff8906;
+}
+
+.icon-footer:hover {
+    -webkit-text-stroke: 1px rgb(247, 247, 247);
+    color: #ff9244;
+}
+
+.cpoy {
+
+    font-size: smaller;
+    color: red;
+    text-align: absolute
+}
+
+@keyframes boxshadowRotate {
+    0% {
+        box-shadow:
+            2px 2px 5px rgb(0, 0, 0),
+            -2px -2px 5px rgb(43, 43, 43),
+            2px -2px 5px rgb(74, 73, 73),
+            -2px 2px 5px rgb(96, 96, 95);
+    }
+
+    25% {
+        box-shadow:
+            2px 2px 5px rgb(96, 96, 95),
+            -2px -2px 5px rgb(0, 0, 0),
+            2px -2px 5px rgb(43, 43, 43),
+            -2px 2px 5px rgb(74, 73, 73);
+    }
+
+    50% {
+        box-shadow:
+            2px 2px 5px rgb(74, 73, 73),
+            -2px -2px 5px rgb(96, 96, 95),
+            2px -2px 5px rgb(0, 0, 0),
+            -2px 2px 5px rgb(43, 43, 43);
+    }
+
+    75% {
+        box-shadow:
+            2px 2px 5px rgb(43, 43, 43),
+            -2px -2px 5px rgb(74, 73, 73),
+            2px -2px 5px rgb(96, 96, 95),
+            -2px 2px 5px rgb(0, 0, 0);
+    }
+
+    100% {
+        box-shadow:
+            2px 2px 5px rgb(0, 0, 0),
+            -2px -2px 5px rgb(43, 43, 43),
+            2px -2px 5px rgb(74, 73, 73),
+            -2px 2px 5px rgb(96, 96, 95);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .anime-grid {
+        gap: 10px;
+    }
+
+    .anime-item {
+        width: 120px;
+        height: 180px;
+    }
+}
