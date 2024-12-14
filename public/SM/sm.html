@@ -219,6 +219,8 @@
         </div>
     </div>
     </div>
+    <button id="scrollToTopBtn"><i class="fa-duotone fa-solid fa-arrow-up fa-fade"></i></button>
+
 
     <!-- footer -->
     <footer id="contact" class="footer-container">
@@ -255,6 +257,25 @@
     </footer>
     <!-- end footer-->
     <script src="../main.js"> </script>
+    <script>
+        // Ambil tombol
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Fungsi untuk menampilkan tombol ketika scroll sudah di bawah
+        window.onscroll = function() {
+            // Jika scroll sudah mencapai bagian bawah, tampilkan tombol
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Fungsi untuk kembali ke atas ketika tombol diklik
+        scrollToTopBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
 </body>
 
 </html>
